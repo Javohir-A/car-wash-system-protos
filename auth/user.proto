@@ -12,7 +12,11 @@ service UserManagementService {
     rpc GetUserById(UserIdRequest) returns (UserResponse);
     rpc UpdateUser(UserRequest) returns (UserResponse);
     rpc DeleteUser(UserIdRequest) returns (google.protobuf.Empty);
-    rpc GetUsers(GetUsersRequest) returns (stream UserResponse);  // Stream for large user lists
+    rpc GetUsers(GetUsersRequest) returns (stream UserResponseStream);  // Stream for large user lists
+}
+
+message UserResponseStream{
+    UserResponse user = 1;
 }
 
 message UserResponse {
