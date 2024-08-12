@@ -5,7 +5,7 @@ option go_package = "genproto/providers";
 package providers;
 
 service Providers {
-    rpc CreateProvider (NewProvider) returns (CreateResp);
+    rpc CreateProvider (NewProvider) returns (CreateResp);   
     rpc SearchProviders (Filter) returns (SearchResp);
 }
 

@@ -10,7 +10,9 @@ service Services {
     rpc DeleteService (ID) returns (Void);
     rpc ListServices (Pagination) returns (ServicesList);
     rpc SearchServices (Filter) returns (SearchResp);
+    rpc GetService (ID) returns (Service);  // New method
 }
+
 
 message NewService {
     string name = 1;
